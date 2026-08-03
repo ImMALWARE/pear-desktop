@@ -1,4 +1,4 @@
-name: Build Pear Desktop
+name: Build YouTube Music
 
 on:
   push:
@@ -10,11 +10,27 @@ env:
   NODE_VERSION: "24.x"
 
 jobs:
-  build:
+  prepare_release:
     permissions:
       contents: write
     if: github.event.pull_request.draft == false
-    name: Build Pear Desktop
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get version
+        run: echo "VERSION_TAG=v$(node -pe "require('./package.json').version")" >> $GITHUB_ENV
+      - name: Create draft release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create ${{ env.VERSION_TAG }} --draft --title "${{ env.VERSION_TAG }}" --notes "Draft release" || true
+
+  build:
+    needs: prepare_release
+    permissions:
+      contents: write
+    if: github.event.pull_request.draft == false
+    name: Build YouTube Music
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: true
@@ -93,7 +109,7 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-latest
-    name: Release Pear Desktop
+    name: Release YouTube Music
     if: github.repository == 'ImMALWARE/pear-desktop' && github.ref == 'refs/heads/main-with-my-changes'
     needs: build
     steps:
@@ -147,7 +163,7 @@ jobs:
         if: ${{ env.VERSION_HASH == '' }}
         uses: irongut/EditRelease@ccf529ad26dddf9996e7dd0f24ca5da4ea507cc2
         with:
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           id: ${{ steps.get_draft_release.outputs.id }}
           draft: false
           prerelease: false
@@ -159,7 +175,7 @@ jobs:
 
             Thanks to all contributors! 🏅
 
-            (Note for Windows: `Pear-Desktop-Web-Setup-${{ env.VERSION_TAG }}.exe` is an installer, and `Pear-Desktop-${{ env.VERSION_TAG }}.exe` is a portable version)
+            (Note for Windows: `YouTube-Music-Web-Setup-${{ env.VERSION_TAG }}.exe` is an installer, and `YouTube-Music-${{ env.VERSION_TAG }}.exe` is a portable version)
 
       - name: Update changelog
         if: ${{ env.VERSION_HASH == '' }}

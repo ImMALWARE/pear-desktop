@@ -8,7 +8,7 @@
   "main": "./dist/main/index.js",
   "type": "module",
   "license": "MIT",
-  "repository": "pear-devs/pear-desktop",
+  "repository": "ImMALWARE/pear-desktop",
   "author": {
     "name": "th-ch",
     "email": "th-ch@users.noreply.github.com",
