@@ -1681,5 +1681,5 @@ All notable changes to this project will be documented in this file. Dates are d
 - fix #490 [`#490`](https://github.com/ImMALWARE/pear-desktop/issues/490)
 - fix #472 [`#472`](https://github.com/ImMALWARE/pear-desktop/issues/472)
 - fix: kuromoji zlib and apply rolldown-vite [`f047dd2`](https://github.com/ImMALWARE/pear-desktop/commit/f047dd2d2df189b55b60188392c451aad65b7a1b)
-- feat: migrate from eslint to oxlint [`de90bbc`](https://github.com/ImMALWARE/pear-desktop/commit/de90bbc79211ee6de8278e28830976c4884480bb)
-- chore: update dependencies and remove unused code [`220b105`](https://github.com/ImMALWARE/pear-desktop/commit/220b10520ed4c094db62242aa7136fb2ff804558)
+- remove landing-pages [`91b2c5a`](https://github.com/ImMALWARE/pear-desktop/commit/91b2c5a41a2fba4e7b940be27049fb6513e83612)
+- Update changelog for v3.12.0 [`d74aaab`](https://github.com/ImMALWARE/pear-desktop/commit/d74aaab5620bd1235e7e743735122e766a79aeb2)
