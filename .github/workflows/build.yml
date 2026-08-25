@@ -1,8 +1,6 @@
 name: Build YouTube Music
 
 on:
-  push:
-    branches: [ main-with-my-changes ]
   workflow_dispatch:
 
 permissions: {}

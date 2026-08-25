@@ -1,16 +1,26 @@
-<div align="center" markdown="1">
-   <sup>Special thanks to:</sup>
-   <br>
-   <br>
-   <a href="https://go.warp.dev/pear-desktop">
-      <img alt="Warp sponsorship" width="400" src="https://github.com/user-attachments/assets/8307ea56-e872-494a-8a9c-de0e296a06ed" />
-   </a>
+# Changes in fork
 
-### [Warp, built for coding with multiple AI agents](https://go.warp.dev/pear-desktop)
-[Available for macOS, Linux, & Windows](https://go.warp.dev/pear-desktop)<br>
+1. Old name & logo back
+2. Taskbar progress plugin
 
-</div>
-<hr>
+   <img width="175" height="38" alt="image" src="https://github.com/user-attachments/assets/f0bab376-cbb0-4907-91c6-1f086ba69ab5" />
+   <img width="179" height="43" alt="image" src="https://github.com/user-attachments/assets/25b46fcf-f77c-47a3-86c8-292696cef966" />
+3. Better scrobbler.
+
+   It is able to turn garbage into normal song names!
+   It uses regex to filter common garbage in songs metadata, and checks MusicBrainz database for known songs, to make scrobbler send as accurate data as possible.
+
+   Examples:
+
+   <img width="864" height="68" alt="image" src="https://github.com/user-attachments/assets/2f381395-4196-4a3b-9ca9-60543f090fdb" />
+   <img width="771" height="76" alt="image" src="https://github.com/user-attachments/assets/0ee610f7-1d9f-4861-86a8-a2c1f5cf8c04" />
+   <img width="722" height="61" alt="image" src="https://github.com/user-attachments/assets/40b8a434-8ea2-4d94-aadc-b010e48ba705" />
+   <img width="796" height="83" alt="image" src="https://github.com/user-attachments/assets/a3ae516c-2ba6-4b38-a37e-a6eb9ddb3c02" />
+   <img width="713" height="77" alt="image" src="https://github.com/user-attachments/assets/d29e0591-86bf-4a98-8038-497cfa4248f9" />
+   <img width="800" height="76" alt="image" src="https://github.com/user-attachments/assets/2ecdc077-ba05-4147-8345-22fafb6af694" />
+   <img width="756" height="77" alt="image" src="https://github.com/user-attachments/assets/c881cd67-5ed3-4228-859e-7f1bdb05cc2b" />
+   <img width="801" height="68" alt="image" src="https://github.com/user-attachments/assets/7fcb04e0-b564-47a9-bb05-586249de015c" />
+4. "No preserves pitch" feature in playback speed plugin. Users can have Nightcore effect with setting speed to, for example, 1.5 and disabling preservesPitch.
 
 <div align="center">
 
